@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Contact Hema</title>
+    </head>
+    <link rel="stylesheet" href="{% static '/css/contactstyle.css' %}" type="text/css">
+     <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=2">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+  integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <header>
+    <div class="nav-bar">
+   <ul class="menu">
+       <li><a class="button" href="{% url 'contact' %}"><font size="5">ContactMe</font></a></li>
+       <li><a class="button" href="{% url 'blog' %}"><font size="5">My Blog</font></a></li>
+       <li><a class="button" href="{% url 'about' %}"><font size="5">AboutMe</font></a></li>
+       <li><a class="button" href="{% url 'home' %}"><font size="5">Home</font></a></li>
+    
+   </ul>
+   </div>
+   </header>
+   <style>
+    body {
+        background-image: url("{% static 'images/whitegrey.png' %}");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: 100% 100%;
+        text-align: center;
+      }
+   </style>
+  
+      <body>
+        <h1> CONTACT ME</h1>
+        <form action="contact" method="POST">
+          {% csrf_token %}            
+         <b>Name</b><input type="text" name="sendername"  required>
+         <b>Email</b><input type="email" name="email" autocomplete="off" required>
+         <b>Subject</b><input type="text" name="subject" required>
+            <label><b>Message</b></label><br>
+            <textarea id="myText" rows="4" cols="50" name="message"> Leave your message here</textarea><br><br>
+            <input type="Submit" value="Send message">
+    
+        </form>
+    </body>
+</html>

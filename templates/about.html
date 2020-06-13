@@ -1,0 +1,64 @@
+
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <title> About Hema</title>
+      <link rel="stylesheet" href="{% static '/css/aboutstyle.css' %}" type="text/css">
+     <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=2">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+  integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  </head>
+  <header>
+    <div class="nav-bar">
+   <ul class="menu">
+       <li><a class="button" href="{% url 'contact' %}"><font size="5">ContactMe</font></a></li>
+       <li><a class="button" href="{% url 'blog' %}"><font size="5">My Blog</font></a></li>
+       <li><a class="button" href="{% url 'about' %}"><font size="5">AboutMe</font></a></li>
+       <li><a class="button" href="{% url 'home' %}"><font size="5">Home</font></a></li>
+    
+   </ul>
+   </div>
+   </header>
+   <style>
+    body{
+        background-image: url("{% static '/images/whitegrey.png' %}");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: 100% 100%;
+    }
+   </style>
+  <body>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+
+  <div class="container">
+    <div class="row">
+        <div class="col-md-3">
+            <div class="card card-body border-info h-100" id="profile-wrapper">
+                <img id="profile-pic" src="{% static 'images/hema.jpg' %}">
+                <br>
+                <h4>Hema Priya Dharshini</h4>
+                <p>Computer Science & Engineering Student</p>
+            </div>
+        </div>
+        <div class="col-md-9">
+            <div class="card card-body border-info h-85">
+                <h4>ABOUT ME</h4>
+                <hr>
+                <p>Hi friends. This is me Hema Priya Dharshini. I am an engineering student pursuing second year(undergraduate) in computer science in Mepco Schlenk Engineering College, Sivakasi.</p>
+                <p>I am the one who is interested in learning new skills that seems interesting and needy to me.</p> 
+                <p>My hobbies are drawing, dancing and reading novels.</p>
+                
+                
+            </div>
+        </div>
+    </div>
+    </div>
+  </body>
+  </html>

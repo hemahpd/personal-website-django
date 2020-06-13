@@ -1,0 +1,76 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <title> Hema Priya Dharshini </title>
+      <link rel="stylesheet" href="{% static '/css/homestyle.css' %}" type="text/css">
+     <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=2">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+</head>
+<style>
+
+  body {
+    background-image: url("{% static '/images/whitegrey.png' %}");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+  }
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+  }
+  
+  li {
+    float: right;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  li a:hover {
+    background-color:whitesmoke;
+  }
+  
+   
+  
+
+  .centretext{
+    margin: 0;
+    padding: 0;
+     text-align: center;
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%,-50%);
+  }
+</style>
+<body>
+    <header>
+     <div class="nav-bar">
+	<ul class="menu">
+        <li><a class="button" href="{% url 'contact' %}"><font size="5">ContactMe</font></a></li>
+        <li><a class="button" href="{% url 'blog' %}"><font size="5">My Blog</font></a></li>
+        <li><a class="button" href="{% url 'about' %}"><font size="5">AboutMe</font></a></li>
+        <li><a class="button" href="{% url 'home' %}"><font size="5">Home</font></a></li>
+	 
+	</ul>
+    </div>
+    </header>
+    <div class="centretext">
+    <h1 style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;"> Hema Priya Dharshini </h1>
+    <p>STUDENT</p> 
+  </div>
+     </body>
+  </html>
